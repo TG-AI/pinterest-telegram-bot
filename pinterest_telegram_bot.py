@@ -118,7 +118,7 @@ def send_image(message):
 
         bot.send_message(
             message.chat.id,
-            "[🥤 Buy Me a Coffee](https://www.buymeacoffee.com/deekay)",
+            "[🥤 Join my channel](https://t.me/AI_bot_projects)",
             parse_mode="MARKDOWN",
             disable_web_page_preview=True,
         )
@@ -137,7 +137,7 @@ def send_image(message):
     except Exception as e:
         error_message = (
             f"Internal Error occured when downloading - {url}.\n"
-            "For support contact - [Pinterest Downloader Support Channel](https://t.me/joinchat/F-YaLRcPqF-__BdvLoSB7Q)"
+            "For support contact - [Support Group](https://t.me/AI_BOT_HELP)"
         )
         logging.error(e)
         bot.send_message(
@@ -159,6 +159,17 @@ def send_instructions(message):
     )
 
 
+    @bot.message_handler(commands=["about"])
+def send_instructions(message):
+    """/about"""
+    msg_content: str = (
+        f"*Hello {message.from_user.first_name}*\n\n📝 *Language:* Python 3\n\n📮 *Channel:* [AI BOT UPDATES](https://t.me/AI_bot_projects)\n\n👥 *Group:* [AI BOT HELP](https://t.me/AI_BOT_HELP)"
+    )
+    bot.send_message(
+        message.chat.id, msg_content, parse_mode="markdown",
+    )
+
+    
 @bot.message_handler(func=lambda m: True)
 def default_message(message):
     msg_content = """Hi, Please use /download command to download."""
