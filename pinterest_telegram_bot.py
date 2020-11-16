@@ -159,7 +159,7 @@ def send_instructions(message):
     )
 
 
-    @bot.message_handler(commands=["about"])
+@bot.message_handler(commands=["about"])
 def send_instructions(message):
     """/about"""
     msg_content: str = (
