@@ -163,7 +163,7 @@ def send_instructions(message):
 def send_instructions(message):
     """/about"""
     msg_content: str = (
-        f"*Hello {message.from_user.first_name}*\n\n📝 *Language:* Python 3\n\n📮 *Channel:* [AI BOT UPDATES](https://t.me/AI_bot_projects)\n\n👥 *Group:* [AI BOT HELP](https://t.me/AI_BOT_HELP)"
+        f"*Hello {message.from_user.first_name}*\n\n🙎🏼‍♂️ *Creator:* [AI](https://t.me/pppppgame)\n\n📝 *Language:* Python 3\n\n📮 *Channel:* [AI BOT UPDATES](https://t.me/AI_bot_projects)\n\n👥 *Group:* [AI BOT HELP](https://t.me/AI_BOT_HELP)\n\n"
     )
     bot.send_message(
         message.chat.id, msg_content, parse_mode="markdown",
